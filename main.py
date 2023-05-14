@@ -26,8 +26,6 @@ def cli():
 @click.option('-o', '--output', default=get_default_output, help='Output path')
 def parse(file_path, output):
     """Command to perform parsing"""
-    # file_path = os.path.abspath(file_path)
-    # output = os.path.abspath(output)
     click.echo(f'Parsing file: {file_path}')
     click.echo(f'Output path: {output}')
 
@@ -38,8 +36,6 @@ def parse(file_path, output):
 @click.option('-o', '--output', default=get_default_output, help='Output path')
 def ipmap(file_path, output):
     """Command to perform parsing"""
-    # file_path = os.path.abspath(file_path)
-    # output = os.path.abspath(output)
     click.echo(f'Parsing file: {file_path}')
     click.echo(f'Output path: {output}')
 
@@ -47,12 +43,10 @@ def ipmap(file_path, output):
 
 @cli.command()
 @click.argument('file_path')
-@click.option('-i', '--ipfs', default='ipfs', help='IPFS path')
+@click.option('--ipfs', required=True, help='IPFS path')
 @click.option('-o', '--output', default=get_default_output, help='Output path')
 def track(file_path, ipfs, output):
     """Command to perform tracking"""
-    # file_path = os.path.abspath(file_path)
-    # output = os.path.abspath(output)
     click.echo(f'Tracking file: {file_path}')
     click.echo(f'Command ipfs path: {ipfs}')
     click.echo(f'Output path: {output}')
@@ -65,8 +59,6 @@ def track(file_path, ipfs, output):
 @click.option('-o', '--output', default=get_default_output, help='Output path')
 def trackdns(file_path, dig, output):
     """Command to perform DNS operation"""
-    # file_path = os.path.abspath(file_path)
-    # output = os.path.abspath(output)
     click.echo(f'Track DNS operation on file: {file_path}')
     click.echo(f'Command `dig` path: {dig}')
     click.echo(f'Output path: {output}')
@@ -79,8 +71,6 @@ def trackdns(file_path, dig, output):
 @click.option('-o', '--output', default=get_default_output, help='Output path')
 def reassemble(directory_path, output):
     """Command to perform reassembly"""
-    # directory_path = os.path.abspath(directory_path)
-    # output = os.path.abspath(output)
     click.echo(f'Reassembling directory: {directory_path}')
     click.echo(f'Output path: {output}')
     
