@@ -5,7 +5,7 @@ import re, csv, os
 def filter_urls(csv_file_path, regex_pattern, output, filename):
     output_file_path = os.path.join(output, filename)
 
-    with open(csv_file_path, 'r', newline='') as csvfile:
+    with open(csv_file_path, 'r', encoding='utf-8', newline='') as csvfile:
         reader = csv.reader(csvfile)
         next(reader)  # Skip the first row (header)
         matching_urls = []
