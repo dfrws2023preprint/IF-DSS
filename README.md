@@ -34,7 +34,7 @@ Commands:
 
 ## Dataset for verification
 
-- Case study 1: [Phishing URL samples](http://data.phishtank.com/data/online-valid.csv) from Phishtank
+- Case study 1: [Phishing URL samples](https://data.phishtank.com/data/online-valid.csv) from Phishtank
 
 - Case study 2: [Host node used for large-scale file sharing](dataset/IPFS_samples.7z)
 
