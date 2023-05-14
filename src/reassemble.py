@@ -86,6 +86,8 @@ def extractList(block, dir_path):
             if search_block["path"] == block_path:
                 if search_block["raw"] == True:
                     blob_data = search_block["raw_data"]
+                elif bool(search_block["decoded"]) == False:
+                    continue
                 elif search_block["decoded"]["Data"]["Type"] == "File":
                     if "Links" in search_block["decoded"].keys():
                         blob_data = extractList(search_block, dir_path)
